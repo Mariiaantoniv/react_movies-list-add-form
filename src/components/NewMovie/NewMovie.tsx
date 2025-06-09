@@ -23,14 +23,6 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    setTitle('');
-    setImgUrl('');
-    setImdbUrl('');
-    setImdbId('');
-    setDescription('');
-
-    setCount(prev => prev + 1);
-
     onAdd({
       title,
       description,
@@ -38,6 +30,14 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
       imdbUrl,
       imdbId,
     });
+
+    setTitle('');
+    setImgUrl('');
+    setImdbUrl('');
+    setImdbId('');
+    setDescription('');
+
+    setCount(prev => prev + 1);
   };
 
   return (
